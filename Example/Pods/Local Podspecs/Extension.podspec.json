@@ -1,7 +1,7 @@
 {
   "name": "Extension",
-  "version": "0.1.1",
-  "summary": "My Extension.",
+  "version": "0.1.2",
+  "summary": "常用扩展",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://gitee.com/uiop/extension",
   "license": {
@@ -9,11 +9,11 @@
     "file": "LICENSE"
   },
   "authors": {
-    "yangxiongkai": "1337503263@qq.com"
+    "yxkkk": "13730228573@163.com"
   },
   "source": {
     "git": "https://gitee.com/uiop/extension.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "13.0"
