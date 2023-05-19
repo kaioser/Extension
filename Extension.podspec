@@ -24,4 +24,8 @@ Pod::Spec.new do |s|
     s.swift_version = '5.0'
     s.source_files = 'Extension/Classes/**/*'
     
+    s.subspec 'Array' do |arr|
+        arr.source_files = 'Extension/Classes/Array/**/*'
+    end
+    
 end
