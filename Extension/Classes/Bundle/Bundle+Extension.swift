@@ -18,7 +18,7 @@ extension Bundle {
             return defaultValue }
         let value = NSLocalizedString(key, bundle: lprojBundle, comment: comment)
 //        let value = bundle!.localizedString(forKey: key, value: "", table: nil)
-        return value;
+        return value
     }
         
     /// 读取plist文件

@@ -11,29 +11,29 @@ public extension UIViewController {
         let scene = UIApplication.shared.connectedScenes.first
         guard let windowScene = scene as? UIWindowScene else { return nil }
         guard let window = windowScene.windows.first else { return nil }
-        return currentController(window.rootViewController)
+        return current(window.rootViewController)
     }
 }
 
 extension UIViewController {
     
-    static private func currentController(_ vc: UIViewController?) -> UIViewController? {
+    static private func current(_ vc: UIViewController?) -> UIViewController? {
         
         if vc == nil { return nil }
         
         if let presentVC = vc?.presentedViewController {
-            return currentController(presentVC)
+            return current(presentVC)
         }
         
         else if let tabVC = vc as? UITabBarController {
             if let selectVC = tabVC.selectedViewController {
-                return currentController(selectVC)
+                return current(selectVC)
             }
             return nil
         }
         
         else if let nav = vc as? UINavigationController {
-            return currentController(nav.visibleViewController)
+            return current(nav.visibleViewController)
         }
         
         else {

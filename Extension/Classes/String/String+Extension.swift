@@ -9,6 +9,6 @@ public extension String {
     
     /// url编码
     var urlEscaped: String {
-        self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
 }

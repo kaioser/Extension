@@ -1,7 +1,17 @@
 PODS:
   - Extension (0.1.2):
     - Extension/Array (= 0.1.2)
+    - Extension/Bundle (= 0.1.2)
+    - Extension/Color (= 0.1.2)
+    - Extension/Device (= 0.1.2)
+    - Extension/String (= 0.1.2)
+    - Extension/ViewController (= 0.1.2)
   - Extension/Array (0.1.2)
+  - Extension/Bundle (0.1.2)
+  - Extension/Color (0.1.2)
+  - Extension/Device (0.1.2)
+  - Extension/String (0.1.2)
+  - Extension/ViewController (0.1.2)
 
 DEPENDENCIES:
   - Extension (from `../`)
@@ -11,7 +21,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Extension: 6a0cfae6d40dac38a0c605b8d4e9b38c96c9bacf
+  Extension: e584f8f2545aef79397c529b45e00ae6b542a1c4
 
 PODFILE CHECKSUM: 2e36a209a919cab635119864022015584916521b
 

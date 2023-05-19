@@ -28,4 +28,24 @@ Pod::Spec.new do |s|
         arr.source_files = 'Extension/Classes/Array/**/*'
     end
     
+    s.subspec 'Device' do |device|
+        device.source_files = 'Extension/Classes/Device/**/*'
+    end
+    
+    s.subspec 'Color' do |color|
+        color.source_files = 'Extension/Classes/Color/**/*'
+    end
+    
+    s.subspec 'String' do |string|
+        string.source_files = 'Extension/Classes/String/**/*'
+    end
+    
+    s.subspec 'ViewController' do |vc|
+        vc.source_files = 'Extension/Classes/ViewController/**/*'
+    end
+    
+    s.subspec 'Bundle' do |bundle|
+        bundle.source_files = 'Extension/Classes/Bundle/**/*'
+    end
+    
 end

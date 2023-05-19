@@ -24,6 +24,26 @@
     {
       "name": "Array",
       "source_files": "Extension/Classes/Array/**/*"
+    },
+    {
+      "name": "Device",
+      "source_files": "Extension/Classes/Device/**/*"
+    },
+    {
+      "name": "Color",
+      "source_files": "Extension/Classes/Color/**/*"
+    },
+    {
+      "name": "String",
+      "source_files": "Extension/Classes/String/**/*"
+    },
+    {
+      "name": "ViewController",
+      "source_files": "Extension/Classes/ViewController/**/*"
+    },
+    {
+      "name": "Bundle",
+      "source_files": "Extension/Classes/Bundle/**/*"
     }
   ],
   "swift_version": "5.0"
