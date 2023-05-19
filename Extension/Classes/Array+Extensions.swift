@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Array {
+public extension Array {
     /// 删除指定下标的元素并将其返回
     /// - Parameter indices: 下标集合
     /// - Returns: 已删除的元素
@@ -22,7 +22,7 @@ extension Array {
     }
 }
 
-extension Array where Element: Hashable {
+public extension Array where Element: Hashable {
     
     /// 数组去重
     var unique: [Element] {
