@@ -13,6 +13,17 @@ public extension UIViewController {
         guard let window = windowScene.windows.first else { return nil }
         return current(window.rootViewController)
     }
+    
+    func popAlert(_ title: String?, message: String?, style: UIAlertController.Style, actions: [UIAlertAction], needCancelAction: Bool = true) {
+        let controller = UIAlertController(title: title, message: message, preferredStyle: style)
+        for action in actions {
+            controller.addAction(action)
+        }
+        if needCancelAction {
+            controller.addAction(.init(title: "取消", style: .cancel))
+        }
+        present(controller, animated: true)
+    }
 }
 
 extension UIViewController {
