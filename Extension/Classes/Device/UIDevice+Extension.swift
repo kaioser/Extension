@@ -11,9 +11,22 @@ public extension UIDevice {
     
     /// 界面方向
     static func interfaceOrientation() -> UIInterfaceOrientation {
-        let scene = UIApplication.shared.connectedScenes.first
-        guard let windowScene = scene as? UIWindowScene else { return .unknown }
+        guard let windowScene = firstWindowScene() else { return .unknown }
         return windowScene.interfaceOrientation
+    }
+    
+    /// 获取scene
+    static func firstWindowScene() -> UIWindowScene? {
+        let scene = UIApplication.shared.connectedScenes.first
+        let windowScene = scene as? UIWindowScene
+        return windowScene
+    }
+    
+    /// 获取window
+    static func firstWindow() -> UIWindow? {
+        guard let windowScene = firstWindowScene() else { return nil }
+        guard let window = windowScene.windows.first else { return nil }
+        return window
     }
 }
 
@@ -40,24 +53,19 @@ public extension UIDevice {
     
     /// 顶部安全区高度
     static func safeDistanceTop() -> CGFloat {
-        let scene = UIApplication.shared.connectedScenes.first
-        guard let windowScene = scene as? UIWindowScene else { return 0 }
-        guard let window = windowScene.windows.first else { return 0 }
+        guard let window = firstWindow() else { return 0 }
         return window.safeAreaInsets.top
     }
     
     /// 底部安全区高度
     static func safeDistanceBottom() -> CGFloat {
-        let scene = UIApplication.shared.connectedScenes.first
-        guard let windowScene = scene as? UIWindowScene else { return 0 }
-        guard let window = windowScene.windows.first else { return 0 }
+        guard let window = firstWindow() else { return 0 }
         return window.safeAreaInsets.bottom
     }
     
     /// 顶部状态栏高度（包括安全区）
     static func statusBarHeight() -> CGFloat {
-        let scene = UIApplication.shared.connectedScenes.first
-        guard let windowScene = scene as? UIWindowScene else { return 0 }
+        guard let windowScene = firstWindowScene() else { return 0 }
         guard let statusBarManager = windowScene.statusBarManager else { return 0 }
         return statusBarManager.statusBarFrame.height
     }

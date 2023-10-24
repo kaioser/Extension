@@ -14,7 +14,7 @@ public extension UIViewController {
         return current(window.rootViewController)
     }
     
-    func popAlert(_ title: String?, message: String?, style: UIAlertController.Style, actions: [UIAlertAction], needCancelAction: Bool = true) {
+    func popAlert(_ title: String? = nil, message: String? = nil, style: UIAlertController.Style, actions: [UIAlertAction], needCancelAction: Bool = true) {
         let controller = UIAlertController(title: title, message: message, preferredStyle: style)
         for action in actions {
             controller.addAction(action)
